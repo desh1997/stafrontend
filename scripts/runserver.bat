@@ -1,0 +1,1 @@
+python manage.py runserver --settings=StockSignalAdvisor.settings.development %1%

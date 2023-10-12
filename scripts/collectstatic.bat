@@ -1,0 +1,1 @@
+python manage.py collectstatic --settings=StockSignalAdvisor.settings.development %1%

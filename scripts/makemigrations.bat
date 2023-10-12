@@ -1,0 +1,1 @@
+python manage.py makemigrations --settings=StockSignalAdvisor.settings.development %1%
