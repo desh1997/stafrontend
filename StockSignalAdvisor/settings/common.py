@@ -80,6 +80,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# REST_FRAMEWORK = {'DEFAULT_PERMISSION_CLASSES': [
+#     'rest_framework.permission.AllowAny'
+# ]}
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
