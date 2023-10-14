@@ -1,6 +1,35 @@
-.login-container {
+.logincontainer {
     background-color: #3498db; /* Replace with the desired background color */
     /* You can add other CSS properties here, like padding, margin, etc. */
-    color: red;
+    color: rgb(224, 228, 10);
+}
+
+loginbody {
+    background-color: blue;
+  }
+
+/* --- Register Css --- */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.frame {
+    background-image: url("../Assets/images/backgroundLightHalfNone.jpg");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 1px;
+}
+
+.myDiv {
+    background: url("../Assets/images/authFormBG.jpg");
+    background-size: cover;
+    box-sizing: border-box;
+    background-position: center center;
+    padding: 10px;
+    border-radius: 1px;
 }
   

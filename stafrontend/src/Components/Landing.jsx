@@ -8,12 +8,17 @@ export const Landing = () => {
         // Use navigate to navigate to the desired page
         navigate('/login'); // Replace with the actual route you want to navigate to
     };
+    const handleRegisterClick = () => {
+        // Use navigate to navigate to the desired page
+        navigate('/register'); // Replace with the actual route you want to navigate to
+    };
 
     return (
         <div>
             <h1>Landing Page</h1>
             <Link to="/login">Go to Login</Link>
             <button className='btn btn-primary'  onClick={handleLoginClick}>Login</button>
+            <button className='btn btn-primary'  onClick={handleRegisterClick}>Register</button>
         </div>
     )
 }

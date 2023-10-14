@@ -1,8 +1,16 @@
 import Axios from '../../utility/api';
+import '../Assets/auth.css';
 
 export const Register = () => {
+
     return (
-        <h1>Register Page</h1>
+        <div className='frame p-1'>
+            <div className='myDiv'>
+                <div className='main_content'>
+                    asdsadsdsadsa
+                </div>
+            </div>
+        </div>
     )
 }
 
