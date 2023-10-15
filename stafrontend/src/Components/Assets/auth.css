@@ -17,13 +17,17 @@ loginbody {
     height: 100vh;
 } */
 
-.reg_container {
+.main_container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
     /* padding: 5%; */
     border-style: solid;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /* padding-left: 5%;
+    padding-right: 5%; */
 }
 
 .frame {
@@ -31,10 +35,11 @@ loginbody {
     background-size: cover;
     background-position: center center;
     border-radius: 1px;
+    min-width: 60vw;
 }
 
 .myDiv {
-    /* background: url("../Assets/images/authFormBG.jpg"); */
+    background: url("../Assets/images/authFormBGLight.jpg");
     background-size: cover;
     box-sizing: border-box;
     background-position: center center;
@@ -42,14 +47,77 @@ loginbody {
     border-radius: 5px;
     /* background-color: rgba(72, 72, 72, 0.5); */
     /* opacity: 100px; */
-    background-color: rgb(234, 233, 233);
+    /* background-color: rgb(234, 233, 233); */
+}
+
+.auth_header_dividor {
+    /* border-style: solid;
+    border-color: rgb(0, 209, 0); */
+    border-style: solid;
+    border-width: 2px; /* Set your desired border width */
+    border-image: linear-gradient(20deg, rgb(236,71,53), rgb(117,255,37));
+    border-image-slice: 1; /* Ensure the entire border is covered with the gradient */
 }
 
 .auth_header {
     display: flex;
 }
 
-.logo {
+/* .logo {
     height: 50px;
     border-radius: 25px;
+} */
+
+.auth_heading {
+    /* color: darkgrey; */
+    color: teal;
+}
+
+.reg_form {
+    display: unset!important;
+}
+.card {
+    border-style: unset !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9) !important;
+}
+
+.card-body {
+    text-align: left;
+}
+
+.form-label {
+    margin-bottom: unset !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    letter-spacing: 2px !important;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem !important;
+    font-weight: 400 !important;
+    color: #040505;
+    background-color: rgba(255, 0, 0, 0);
+    background-clip: padding-box;
+    /* border: var(--bs-border-width) solid var(--bs-border-color); */
+    border-radius: var(--bs-border-radius);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    /* font-style: italic; */
+    letter-spacing: 2px !important;
+}
+
+.submit_btn {
+    background: linear-gradient(20deg, rgb(236, 71, 53), rgb(117, 255, 37));
+    color: white;
+    border-radius: 2px;
+    border-color: teal;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9) !important;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
