@@ -34,14 +34,15 @@ loginbody {
 }
 
 .myDiv {
-    background: url("../Assets/images/authFormBG.jpg");
+    /* background: url("../Assets/images/authFormBG.jpg"); */
     background-size: cover;
     box-sizing: border-box;
     background-position: center center;
     padding: 10px;
     border-radius: 5px;
-    /* background-color: rgba(255, 255, 255, 0.5); */
-    opacity: 100px;
+    /* background-color: rgba(72, 72, 72, 0.5); */
+    /* opacity: 100px; */
+    background-color: rgb(234, 233, 233);
 }
 
 .auth_header {
