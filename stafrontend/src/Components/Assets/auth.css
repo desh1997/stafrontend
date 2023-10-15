@@ -121,3 +121,22 @@ loginbody {
     padding-top: 2px;
     padding-bottom: 2px;
 }
+
+.auth_form_left {
+    text-align: left;
+}
+
+.auth_form_left_cont {
+    padding: 15% 2% 2% 2%;
+    height: 100%;
+}
+
+.auth_text_head {
+    color: rgb(1, 82, 1);
+    font-size: x-large;
+}
+
+.auth_text {
+    /* color: green; */
+    color: rgb(1, 82, 1);
+}

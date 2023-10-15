@@ -14,8 +14,19 @@ export const Register = () => {
                             <img className='logo' src={logo} alt="Your Logo"/>
                         </div> */}
                         <div className='d-flex'>
-                            <div className='col-6'>
-                                fdhdhfdhfdhgfgf
+                            <div className='col-6 auth_form_left'>
+                                <div className='auth_form_left_cont'>
+                                    <span className='auth_text_head'>Empower Your Investments with Stock Signal Advisor</span><br/>
+                                    <div className='mt-2'>
+                                    <span className='auth_text'>
+                                        Gain confidence in your investment <br/>
+                                        decisions with real-time market analysis <br/>
+                                        and personalized stock recommendations from <br/>
+                                        Stock Signal Advisor. Make informed choices <br/>
+                                        and maximize your portfolio's potential.
+                                    </span>
+                                    </div>
+                                </div>
                             </div>
                             <div className='col-6'>
                                 <div className='card rounded-0'>
