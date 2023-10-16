@@ -49,17 +49,23 @@ export const AuthForm = () => {
                                     {/* <h5 className='m-2 auth_heading'>Log In</h5>
                                     <div className='auth_header_dividor'></div>
                                     <h5 className='m-2 auth_heading'>Sign Up</h5> */}
+                                    <div>
                                     <h5
                                         className={`m-2 auth_heading ${showLogin ? 'active' : ''}`}
                                         onClick={handleToggleLogin}>
                                         Log In
                                     </h5>
+                                    <div className={`auth_underline ${showLogin ? 'active' : ''}`} />
+                                    </div>
                                     <div className='auth_header_dividor'></div>
+                                    <div>
                                     <h5
                                         className={`m-2 auth_heading ${showSignUp ? 'active' : ''}`}
                                         onClick={handleToggleSignUp}>
-                                    Sign Up
+                                        Sign Up
                                     </h5>
+                                    <div className={`auth_underline ${showSignUp ? 'active' : ''}`} />
+                                    </div>
                                 </div>
                                 {showSignUp && <SignUp />}
                                 {showLogin && <Login />}

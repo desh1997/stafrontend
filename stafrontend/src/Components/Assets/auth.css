@@ -56,6 +56,8 @@ loginbody {
     border-width: 2px; /* Set your desired border width */
     border-image: linear-gradient(20deg, rgb(236,71,53), rgb(117,255,37));
     border-image-slice: 1; /* Ensure the entire border is covered with the gradient */
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .auth_header {
@@ -142,4 +144,17 @@ loginbody {
 .auth_text {
     /* color: green; */
     color: rgb(1, 82, 1);
+}
+
+.auth_underline {
+    height: 2px;
+    width: 0;
+    background-color: transparent;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.auth_underline.active {
+    width: 80%;
+    background-color: #3498db;
+    margin-left: 10%; 
 }
