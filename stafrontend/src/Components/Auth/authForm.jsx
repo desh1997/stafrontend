@@ -4,8 +4,21 @@ import logo from '../Assets/images/logoLG.jpg';
 // import React, { useState } from 'react';
 import SignUp from './register';
 import Login from './login';
+import React, { useState } from 'react';
 
 export const AuthForm = () => {
+    const [showSignUp, setShowSignUp] = useState(false);
+    const [showLogin, setShowLogin] = useState(true);
+
+    const handleToggleSignUp = () => {
+        setShowSignUp(true);
+        setShowLogin(false);
+    };
+
+    const handleToggleLogin = () => {
+        setShowSignUp(false);
+        setShowLogin(true);
+    };
 
     return (
         <div className='main_container'>
@@ -33,12 +46,23 @@ export const AuthForm = () => {
                             <div className='col-6'>
                             <div className='card rounded-0'>
                                 <div className='card-header d-flex justify-content-center'>
-                                    <h5 className='m-2 auth_heading'>Log In</h5>
+                                    {/* <h5 className='m-2 auth_heading'>Log In</h5>
                                     <div className='auth_header_dividor'></div>
-                                    <h5 className='m-2 auth_heading'>Sign Up</h5>
+                                    <h5 className='m-2 auth_heading'>Sign Up</h5> */}
+                                    <h5
+                                        className={`m-2 auth_heading ${showLogin ? 'active' : ''}`}
+                                        onClick={handleToggleLogin}>
+                                        Log In
+                                    </h5>
+                                    <div className='auth_header_dividor'></div>
+                                    <h5
+                                        className={`m-2 auth_heading ${showSignUp ? 'active' : ''}`}
+                                        onClick={handleToggleSignUp}>
+                                    Sign Up
+                                    </h5>
                                 </div>
-                                <SignUp/>
-                                {/* <Login/> */}
+                                {showSignUp && <SignUp />}
+                                {showLogin && <Login />}
                             </div>
                             </div>
                         </div>

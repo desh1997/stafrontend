@@ -71,6 +71,10 @@ loginbody {
     /* color: darkgrey; */
     color: teal;
 }
+.auth_heading:hover {
+    /* color: darkgrey; */
+    cursor: pointer;
+}
 
 .reg_form {
     display: unset!important;
