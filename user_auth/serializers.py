@@ -18,7 +18,9 @@ class UserSerializer(serializers.ModelSerializer):
         email = validated_data['email']
         password = validated_data['password']
         confirm_password = validated_data.pop('confirm_password')  # Remove confirmPassword from validated_data
-        
+        first_name=validated_data['first_name']
+        last_name=validated_data['last_name']
+
         if User.objects.filter(email=email).exists():
             raise exceptions.ValidationError("User with this email already exists.")
         
@@ -27,8 +29,8 @@ class UserSerializer(serializers.ModelSerializer):
         
         user = User(
             email=email,
-            first_name=validated_data['first_name'],
-            last_name=validated_data['last_name'],
+            first_name=first_name,
+            last_name=last_name,
         )
         user.set_password(password)  # Use the password from the validated_data
         user.username = email

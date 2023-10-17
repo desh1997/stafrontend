@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Axios from '../../utility/api'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const SignUp = () => {
 
@@ -15,13 +17,15 @@ export const SignUp = () => {
         e.preventDefault();
         try {
             const response = await Axios.post('api-v1/auth/user-register/', formData);
-            console.log(response.data);
-            alert("success");
-            // Handle success or redirect the user to a login page.
+            if (response.status === 201) {
+                console.log(response);
+                toast.success(response.data.message);
+            } else {
+                toast.warn('Registration failed. Please try again.');
+            }
         } catch (error) {
-            console.error(error);
-            alert("error");
-            // Handle registration failure, e.g., display an error message.
+            console.error(error.response.data[0]);
+            toast.error(error.response.data[0]);
         }
     };
 
@@ -31,7 +35,7 @@ export const SignUp = () => {
     };
 
     return (
-        <>   
+        <> 
             <div className='card-body'>
                 <form onSubmit={handleSubmit}>
                     <div className='mb-1'>
@@ -59,6 +63,7 @@ export const SignUp = () => {
                     </div>
                 </form>
             </div>
+            <ToastContainer />
         </>
     );  
 }
