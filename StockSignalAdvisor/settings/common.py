@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'user_auth',
     # --- Third-Party Library ---
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -40,7 +41,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+# SECURE_REFERRER_POLICY = 'strict-origin-when-cross-origin'
 
 ROOT_URLCONF = 'StockSignalAdvisor.urls'
 
@@ -84,7 +88,8 @@ AUTH_PASSWORD_VALIDATORS = [
 #     'rest_framework.permission.AllowAny'
 # ]}
 
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
