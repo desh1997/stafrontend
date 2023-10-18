@@ -4,7 +4,7 @@ import logo from '../Assets/images/logoLG.jpg';
 // import React, { useState } from 'react';
 import SignUp from './register';
 import Login from './login';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Assets/toastr.css'
 
 
@@ -21,6 +21,14 @@ export const AuthForm = () => {
         setShowSignUp(false);
         setShowLogin(true);
     };
+
+    useEffect(() => {
+        if (showLogin) {
+          document.title = 'Login';
+        } else if (showSignUp) {
+          document.title = 'Sign-Up';
+        }
+    }, [showLogin, showSignUp]);
 
     return (
         <div className='main_container'>
