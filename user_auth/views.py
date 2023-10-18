@@ -1,10 +1,14 @@
 from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.response import Response
-from rest_framework import status
 from django.contrib.auth.models import User
-from .serializers import UserSerializer
+from .serializers import UserSerializer, UserLoginSerializer
 from rest_framework import exceptions
+from django.contrib.auth import authenticate
+from rest_framework import generics, status
+from rest_framework.response import Response
+from rest_framework.authtoken.models import Token
+
 
 class UserRegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
@@ -23,3 +27,20 @@ class UserRegisterView(generics.CreateAPIView):
 
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class UserLoginView(generics.CreateAPIView):
+    serializer_class = UserLoginSerializer
+
+    def create(self, request, *args, **kwargs):
+        email = request.data.get('email')
+        password = request.data.get('password')
+
+        user = authenticate(username=email, password=password)
+        
+        if user:
+            token, created = Token.objects.get_or_create(user=user)
+            return Response({'token': token.key}, status=status.HTTP_200_OK)
+        else:
+            return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
+

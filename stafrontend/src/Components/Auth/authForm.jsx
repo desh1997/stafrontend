@@ -1,6 +1,6 @@
-import Axios from '../../utility/api';
+// import Axios from '../../utility/api';
 import '../Assets/auth.css';
-import logo from '../Assets/images/logoLG.jpg';
+// import logo from '../Assets/images/logoLG.jpg';
 // import React, { useState } from 'react';
 import SignUp from './register';
 import Login from './login';

@@ -13,7 +13,7 @@ export const SignUp = () => {
         confirm_password: '',
     });
 
-    const handleSubmit = async (e) => {
+    const handleRegister = async (e) => {
         e.preventDefault();
         try {
             const response = await Axios.post('api-v1/auth/user-register/', formData);
@@ -37,7 +37,7 @@ export const SignUp = () => {
     return (
         <> 
             <div className='card-body'>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleRegister}>
                     <div className='mb-1'>
                         <label htmlFor="first-name" className="form-label">First Name</label>
                         <input name='first_name' value={formData.firstName} onChange={handleChange} type="text" id="first-name" className="form-control" placeholder="First Name" />
