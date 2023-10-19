@@ -1,0 +1,31 @@
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:rgb(85, 177, 23);
+
+    padding-top: 20px;
+}
+
+.sidebar a:hover {
+    background-color: rgb(178,160,46);
+}
+
+.sidebar a {
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+.header {
+    background-color: rgb(85, 177, 23); /* Green color */
+    color: white; /* Text color */
+    text-align: center;
+    padding: 20px; /* Add padding for space around the text */
+    font-size: 24px; /* Adjust the font size as needed */
+}

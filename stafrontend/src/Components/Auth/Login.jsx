@@ -21,7 +21,7 @@ export const Login = () => {
           const response = await Axios.post('api-v1/auth/user-login/', formData);
           if (response.status === 200) {
               console.log(response);
-              navigate('/');
+              navigate('/dashboard');
           } else {
               toast.warn('Login failed. Please try again.');
           }

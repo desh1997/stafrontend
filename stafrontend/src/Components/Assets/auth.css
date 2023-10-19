@@ -19,10 +19,11 @@
     justify-content: center;
     /* height: 100vh; */
     /* padding: 5%; */
-    padding-top: 2%;
-    padding-bottom: 2%;
+    /* padding-top: 2%; */
+    /* padding-bottom: 2%; */
     /* padding-left: 5%;
     padding-right: 5%; */
+    height: 100vh;
 }
 
 .frame {
@@ -31,6 +32,7 @@
     background-position: center center;
     border-radius: 1px;
     min-width: 60vw;
+    height: 100vh;
 }
 
 .myDiv {
@@ -38,7 +40,7 @@
     background-size: cover;
     box-sizing: border-box;
     background-position: center center;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
     /* background-color: rgba(72, 72, 72, 0.5); */
     /* opacity: 100px; */
@@ -128,7 +130,8 @@
 }
 
 .auth_form_left_cont {
-    padding: 5% 2% 2% 2%;
+    /* padding: 5% 2% 2% 2%; */
+    padding: 5% 5% 49% 5%;
     height: 100%;
 }
 
@@ -157,4 +160,8 @@
 
 .fa-arrow-left {
     color: red;
+}
+
+.auth_back {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }

@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import { Register } from "../src/Components/Auth/Register";
 import { AuthForm } from "../src/Components/Auth/authForm";
 import { Landing } from "../src/Components/Landing";
+import { Base } from './Components/Dashboard/base';
 
 function App() {
   return (
@@ -13,8 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="" element={<Landing />} />
-
         <Route path="/auth" element={<AuthForm />} />
+        <Route path="/dashboard" element={<Base/>}/>
         {/* <Route path="/login" element={<Login />} /> */}
       </Routes>
     </BrowserRouter>

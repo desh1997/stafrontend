@@ -42,17 +42,17 @@ export const AuthForm = () => {
                         {/* </div> */}
                         <div className='d-flex'>
                             <div className='col-6 auth_form_left'>
-                                <Link to="/"><i class="fa-solid fa-arrow-left fa-2xl"></i></Link>
+                                <Link className='auth_back' to="/"><i class="fa-solid fa-arrow-left fa-xl"></i></Link>
                                 <div className='auth_form_left_cont'>
                                     <span className='auth_text_head'>Empower Your Investments with Stock Signal Advisor</span><br/>
                                     <div className='mt-2'>
-                                    <span className='auth_text'>
-                                        Gain confidence in your investment <br/>
-                                        decisions with real-time market analysis <br/>
-                                        and personalized stock recommendations from <br/>
-                                        Stock Signal Advisor. Make informed choices <br/>
-                                        and maximize your portfolio's potential.
-                                    </span>
+                                        <span className='auth_text'>
+                                            Gain confidence in your investment <br/>
+                                            decisions with real-time market analysis <br/>
+                                            and personalized stock recommendations from <br/>
+                                            Stock Signal Advisor. Make informed choices <br/>
+                                            and maximize your portfolio's potential.
+                                        </span>
                                     </div>
                                 </div>
                             </div>
