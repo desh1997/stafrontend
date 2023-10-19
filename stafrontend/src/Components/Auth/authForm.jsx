@@ -6,6 +6,7 @@ import SignUp from './register';
 import Login from './login';
 import React, { useState, useEffect } from 'react';
 import '../Assets/toastr.css'
+import { Link, useNavigate } from 'react-router-dom';
 
 
 export const AuthForm = () => {
@@ -35,11 +36,13 @@ export const AuthForm = () => {
             <div className='frame p-3'>
                 <div className='myDiv'>
                     <div className='main_content'>
-                        {/* <div className='auth_header'>
-                            <img className='logo' src={logo} alt="Your Logo"/>
-                        </div> */}
+                        {/* <div className='auth_header'> */}
+                            {/* <i class="fa-solid fa-arrow-left fa-2xl"></i> */}
+                            {/* <img className='logo' src={logo} alt="Your Logo"/> */}
+                        {/* </div> */}
                         <div className='d-flex'>
                             <div className='col-6 auth_form_left'>
+                                <Link to="/"><i class="fa-solid fa-arrow-left fa-2xl"></i></Link>
                                 <div className='auth_form_left_cont'>
                                     <span className='auth_text_head'>Empower Your Investments with Stock Signal Advisor</span><br/>
                                     <div className='mt-2'>

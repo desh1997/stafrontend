@@ -4,10 +4,6 @@
     color: rgb(224, 228, 10);
 }
 
-loginbody {
-    background-color: blue;
-  }
-
 /* --- Register Css --- */
 
 /* body {
@@ -132,7 +128,7 @@ loginbody {
 }
 
 .auth_form_left_cont {
-    padding: 15% 2% 2% 2%;
+    padding: 5% 2% 2% 2%;
     height: 100%;
 }
 
@@ -157,4 +153,8 @@ loginbody {
     width: 80%;
     background-color: #3498db;
     margin-left: 10%; 
+}
+
+.fa-arrow-left {
+    color: red;
 }
