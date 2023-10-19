@@ -8,6 +8,8 @@ from django.contrib.auth import authenticate
 from rest_framework import generics, status
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
+from rest_framework.generics import GenericAPIView
+from django.contrib.auth import logout
 
 
 class UserRegisterView(generics.CreateAPIView):
@@ -44,3 +46,10 @@ class UserLoginView(generics.CreateAPIView):
         else:
             return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
 
+
+class UserLogoutView(GenericAPIView):
+    # serializer_class = LogoutSerializer
+
+    def post(self, request, *args, **kwargs):
+        logout(request)
+        return Response({'message': 'Logged out successfully.'}, status=status.HTTP_200_OK)
