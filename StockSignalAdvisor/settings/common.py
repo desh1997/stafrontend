@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     # --- Django Apps ---
     'database_container',
     'user_auth',
+    'dashboard',
     # --- Third-Party Library ---
     'rest_framework',
     'corsheaders',
