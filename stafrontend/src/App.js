@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AuthForm } from "../src/Components/Auth/authForm";
 import { Landing } from "../src/Components/Landing";
 import { Base } from './Components/Dashboard/base';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
